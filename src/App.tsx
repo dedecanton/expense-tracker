@@ -13,6 +13,9 @@ import { items } from './data/items';
 // helper
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
 
+// components
+import { TableArea } from './components/TableArea';
+
 const App = () => {
 
   const [list, setList] = useState(items);
@@ -37,6 +40,7 @@ const App = () => {
         {/* Área de inserção */}
 
         {/* Tabela de itens */}
+        <TableArea list={filteredList}/>
         
 
       </C.Body>
