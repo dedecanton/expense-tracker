@@ -15,6 +15,7 @@ import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
 
 // components
 import { TableArea } from './components/TableArea';
+import { InfoArea } from './components/InfoArea';
 
 const App = () => {
 
@@ -26,6 +27,9 @@ const App = () => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth])
 
+  const handleMonthChange = (newMonth:string) => {
+    setCurrentMonth(newMonth)
+  }
 
   return (
     <C.Container>
@@ -36,6 +40,10 @@ const App = () => {
       <C.Body>
 
         {/* Área de informações */}
+        <InfoArea
+        currentMonth={currentMonth}
+        onMonthChange={handleMonthChange}  
+        />
 
         {/* Área de inserção */}
 
