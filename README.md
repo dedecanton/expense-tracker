@@ -9,7 +9,7 @@ Você pode conferir o resultado [clicando aqui!](https://dedecanton.github.io/e
 - Conhecimentos aprimorados
     - HTML
     - CSS
-    - JavaScript
+    - Typescript
     - ReactJS
     - Git
 
