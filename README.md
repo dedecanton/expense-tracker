@@ -1,5 +1,3 @@
-# Expense-tracker
-
 ## Controle Financeiro com ReactJS
 
 Esse projeto foi desenvolvido visando revisar e aplicar conceitos aprendidos de ReactJS, com o auxílio dos conhecimentos do Bonieky Lacerda.
