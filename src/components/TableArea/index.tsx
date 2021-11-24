@@ -1,14 +1,21 @@
 import * as C from './styles'
-import {Item} from '../../types/Item'
-import {TableItem} from '../TableItem'
+import { Item } from '../../types/Item'
+import { TableItem } from '../TableItem'
 
 
-type Props={
+type Props = {
     list: Item[];
+    onRemove: (item: Item) => void;
 }
 
-export const TableArea = ({list}: Props) => {
-    return(
+
+export const TableArea = ({ list, onRemove }: Props) => {
+
+    const removeItem = (item: Item) => {
+        onRemove(item)
+    }
+
+    return (
         <C.Table>
             <thead>
                 <tr>
@@ -16,12 +23,13 @@ export const TableArea = ({list}: Props) => {
                     <C.TableHeadColumn width={130}>Categoria</C.TableHeadColumn>
                     <C.TableHeadColumn>Título</C.TableHeadColumn>
                     <C.TableHeadColumn width={150}>Valor</C.TableHeadColumn>
+                    <C.TableHeadColumn width={10}></C.TableHeadColumn>
                 </tr>
             </thead>
 
             <tbody>
-                {list.map((item,index) => (
-                    <TableItem key={index} item={item}/>
+                {list.map((item, index) => (
+                    <TableItem deleteItem={removeItem} key={index} item={item}/>
                 ))}
             </tbody>
         </C.Table>

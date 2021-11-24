@@ -14,8 +14,22 @@ export const Category = styled.div<{ color: string }>`
     background: ${props => props.color};
 `
 
-export const Value = styled.div<{ color:string }>`
+export const Value = styled.div<{ color: string }>`
     color:${props => props.color};
     padding:10px;
 
 `
+
+export const Button = styled.button`
+    height: 30px;
+    padding: 5px 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: #ffcccb;
+    color: black;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+    
+`;

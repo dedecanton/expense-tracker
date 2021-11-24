@@ -26,6 +26,7 @@ const App = () => {
   const [income, setIncome] = useState(0)
   const [expense, setExpense] = useState(0)
 
+
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth])
@@ -57,6 +58,15 @@ const App = () => {
     setList(newList)
   }
 
+  const handleRemoveItem = (item:Item) => {
+    const index = list.indexOf(item)
+    
+    const newArray = [...list]
+    newArray.splice(index,1)
+    
+    setList(newArray)
+  }
+
   return (
     <C.Container>
       <C.Header>
@@ -77,7 +87,7 @@ const App = () => {
         <InputArea onAdd={handleAddItem}/>
 
         {/* Tabela de itens */}
-        <TableArea list={filteredList} />
+        <TableArea list={filteredList} onRemove={handleRemoveItem} />
 
 
       </C.Body>
