@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     flex:1;
+
+    @media screen and (max-width:900px){
+        margin-top: 15px;
+    }
+    
 `
 
 export const Title = styled.div`

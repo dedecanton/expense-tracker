@@ -12,6 +12,11 @@ export const Category = styled.div<{ color: string }>`
     border-radius: 5px;
     color: #FFF;
     background: ${props => props.color};
+    
+
+    @media screen and (max-width:900px){
+        margin: auto 10px
+    }
 `
 
 export const Value = styled.div<{ color: string }>`

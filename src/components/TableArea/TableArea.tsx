@@ -23,7 +23,7 @@ const TableArea = ({ list, onRemove }: Props) => {
                     <C.TableHeadColumn width={130}>Categoria</C.TableHeadColumn>
                     <C.TableHeadColumn>Título</C.TableHeadColumn>
                     <C.TableHeadColumn width={150}>Valor</C.TableHeadColumn>
-                    <C.TableHeadColumn width={10}></C.TableHeadColumn>
+                    <C.TableHeadColumn width={100}></C.TableHeadColumn>
                 </tr>
             </thead>
 

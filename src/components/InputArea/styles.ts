@@ -8,10 +8,19 @@ export const Container = styled.div`
     margin-top: 20px;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width:900px){
+        flex-direction: column;
+    }
 `;
 export const InputLabel = styled.label`
+    
     flex: 1;
     margin: 10px;
+
+    @media screen and (max-width:900px){
+        width:100%;
+    }
 `;
 export const InputTitle = styled.div`
     font-weight: bold;
