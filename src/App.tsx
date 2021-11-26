@@ -4,7 +4,6 @@ import * as C from './App.styles'
 
 // types
 import { Item } from './types/Item';
-import { Category } from './types/Category';
 
 // data
 import { categories } from './data/categories';
@@ -14,9 +13,9 @@ import { items } from './data/items';
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
 
 // components
-import { TableArea } from './components/TableArea';
-import { InfoArea } from './components/InfoArea';
-import { InputArea } from './components/InputArea';
+import TableArea from './components/TableArea';
+import InfoArea from './components/InfoArea';
+import InputArea from './components/InputArea';
 
 const App = () => {
 
